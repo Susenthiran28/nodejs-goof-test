@@ -1,0 +1,5201 @@
+{
+  "vigilnzExportVersion": 1,
+  "source": "vscode-extension",
+  "exportedAt": "2026-09-25T18:27:20.497Z",
+  "workspace": "nodejs-goof-test",
+  "scanStatus": "completed",
+  "summary": {
+    "totalFindings": 0,
+    "criticalFindings": 0,
+    "highFindings": 0,
+    "mediumFindings": 0,
+    "lowFindings": 0,
+    "filesAffected": 0
+  },
+  "scans": {
+    "sca": {
+      "scanId": "",
+      "repositoryName": "nodejs-goof-test",
+      "branch": "",
+      "fileName": "nodejs-goof-test",
+      "total": 34,
+      "vulnerabilities": [
+        {
+          "cveId": "CVE-2018-16490",
+          "ghsaId": "GHSA-H466-J336-74WX",
+          "aliases": [
+            "CVE-2018-16490",
+            "GHSA-H466-J336-74WX"
+          ],
+          "packageName": "mpath",
+          "packageVersion": "0.1.1",
+          "severity": "high",
+          "description": "Versions of `mpath` before 0.5.1 are vulnerable to prototype pollution. Provided certain input `mpath` can add or modify properties of the `Object` prototype. These properties will be present on all objects.\n\n\n## Recommendation\n\nUpdate to version `0.5.1` or later.",
+          "fixedVersions": "0.5.1",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16490",
+            "https://hackerone.com/reports/390860",
+            "https://github.com/advisories/GHSA-h466-j336-74wx",
+            "https://www.npmjs.com/advisories/779"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mpath@0.1.1",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongoose",
+            "mpath"
+          ],
+          "parentPackages": [
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2021-23438",
+          "ghsaId": "GHSA-P92X-R36W-9395",
+          "aliases": [
+            "CVE-2021-23438",
+            "GHSA-P92X-R36W-9395"
+          ],
+          "packageName": "mpath",
+          "packageVersion": "0.1.1",
+          "severity": "medium",
+          "description": "This affects the package mpath before 0.8.4. A type confusion vulnerability can lead to a bypass of CVE-2018-16490. In particular, the condition `ignoreProperties.indexOf(parts[i]) !== -1` returns `-1` if `parts[i]` is `['__proto__']`. This is because the method that has been called if the input is an array is `Array.prototype.indexOf()` and not `String.prototype.indexOf()`. They behave differently depending on the type of the input.",
+          "fixedVersions": "0.8.4",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-23438",
+            "https://github.com/aheckmann/mpath/commit/89402d2880d4ea3518480a8c9847c541f2d824fc",
+            "https://github.com/mongoosejs/mpath/commit/89402d2880d4ea3518480a8c9847c541f2d824fc",
+            "https://github.com/aheckmann/mpath",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1579548",
+            "https://snyk.io/vuln/SNYK-JS-MPATH-1577289"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mpath@0.1.1",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.6,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongoose",
+            "mpath"
+          ],
+          "parentPackages": [
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2017-20162",
+          "ghsaId": "GHSA-W9MR-4MFR-499F",
+          "aliases": [
+            "CVE-2017-20162",
+            "GHSA-W9MR-4MFR-499F"
+          ],
+          "packageName": "ms",
+          "packageVersion": "0.7.3",
+          "severity": "medium",
+          "description": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The name of the patch is caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+          "fixedVersions": "2.0.0",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-20162",
+            "https://github.com/vercel/ms/pull/89",
+            "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+            "https://github.com/vercel/ms",
+            "https://github.com/vercel/ms/releases/tag/2.0.0",
+            "https://security.netapp.com/advisory/ntap-20241108-0002",
+            "https://vuldb.com/?ctiid.217451",
+            "https://vuldb.com/?id.217451"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ms@0.7.3",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.3,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "ms"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2025-14505",
+          "ghsaId": "GHSA-848J-6MX2-7J84",
+          "aliases": [
+            "CVE-2025-14505",
+            "GHSA-848J-6MX2-7J84"
+          ],
+          "packageName": "elliptic",
+          "packageVersion": "6.6.1",
+          "severity": "low",
+          "description": "The ECDSA implementation of the Elliptic package generates incorrect signatures if an interim value of 'k' (as computed based on step 3.2 of  RFC 6979 https://datatracker.ietf.org/doc/html/rfc6979 ) has leading zeros and is susceptible to cryptanalysis, which can lead to secret key exposure. This happens, because the byte-length of 'k' is incorrectly computed, resulting in its getting truncated during the computation. Legitimate transactions or communications will be broken as a result. Furthermore, due to the nature of the fault, attackers could–under certain conditions–derive the secret key, if they could get their hands on both a faulty signature generated by a vulnerable version of Elliptic and a correct signature for the same inputs.\n\nThis issue affects all known versions of Elliptic (at the time of writing, versions less than or equal to 6.6.1).",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-14505",
+            "https://github.com/indutny/elliptic/issues/321",
+            "https://github.com/indutny/elliptic",
+            "https://www.herodevs.com/vulnerability-directory/cve-2025-14505"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/elliptic@6.6.1",
+          "manifestPath": "package.json",
+          "fixState": "wont-fix",
+          "score": 5.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "browserify",
+            "crypto-browserify",
+            "create-ecdh",
+            "elliptic"
+          ],
+          "parentPackages": [
+            "browserify@13.3.0"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Classified as non-runtime dependency; not part of application runtime code path."
+        },
+        {
+          "cveId": "CVE-2021-4264",
+          "ghsaId": "GHSA-C6RP-WRP9-QR4Q",
+          "aliases": [
+            "CVE-2021-4264",
+            "GHSA-C6RP-WRP9-QR4Q"
+          ],
+          "packageName": "dustjs-linkedin",
+          "packageVersion": "2.5.0",
+          "severity": "high",
+          "description": "A vulnerability was found in LinkedIn dustjs prior to version 3.0.0 and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.0.0 can address this issue. The name of the patch is ddb6523832465d38c9d80189e9de60519ac307c3. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216464.",
+          "fixedVersions": "3.0.0",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-4264",
+            "https://github.com/linkedin/dustjs/issues/804",
+            "https://github.com/linkedin/dustjs/pull/805",
+            "https://github.com/linkedin/dustjs/commit/ddb6523832465d38c9d80189e9de60519ac307c3",
+            "https://github.com/linkedin/dustjs",
+            "https://github.com/linkedin/dustjs/releases/tag/v3.0.0",
+            "https://vuldb.com/?ctiid.216464",
+            "https://vuldb.com/?id.216464"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/dustjs-linkedin@2.5.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 8.8,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "dustjs-linkedin"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2018-1002204",
+          "ghsaId": "GHSA-3V6H-HQM4-2RG6",
+          "aliases": [
+            "CVE-2018-1002204",
+            "GHSA-3V6H-HQM4-2RG6"
+          ],
+          "packageName": "adm-zip",
+          "packageVersion": "0.4.7",
+          "severity": "medium",
+          "description": "Versions of `adm-zip` before 0.4.9 are vulnerable to arbitrary file write when used to extract a specifically crafted archive that contains path traversal filenames (`../../file.txt` for example).\n\n\n## Recommendation\n\nUpdate to version 0.4.9 or later.",
+          "fixedVersions": "0.4.11",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-1002204",
+            "https://github.com/cthackers/adm-zip/pull/212",
+            "https://github.com/cthackers/adm-zip/commit/62f64004fefb894c523a7143e8a88ebe6c84df25",
+            "https://hackerone.com/reports/362118",
+            "https://github.com/advisories/GHSA-3v6h-hqm4-2rg6",
+            "https://github.com/snyk/zip-slip-vulnerability",
+            "https://snyk.io/research/zip-slip-vulnerability",
+            "https://snyk.io/vuln/npm:adm-zip:20180415",
+            "https://www.npmjs.com/advisories/681",
+            "https://www.npmjs.com/advisories/994",
+            "http://www.securityfocus.com/bid/107001"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/adm-zip@0.4.7",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.5,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "adm-zip"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2019-17426",
+          "ghsaId": "GHSA-8687-VV9J-HGPH",
+          "aliases": [
+            "CVE-2019-17426",
+            "GHSA-8687-VV9J-HGPH"
+          ],
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "critical",
+          "description": "Automattic Mongoose through 5.7.4 allows attackers to bypass access control (in some applications) because any query object with a `_bsontype` attribute is ignored. For example, adding `\"_bsontype\":\"a\"` can sometimes interfere with a query filter. NOTE: this CVE is about Mongoose's failure to work around this _bsontype special case that exists in older versions of the bson parser (aka the mongodb/js-bson project).",
+          "fixedVersions": "4.13.21",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-17426",
+            "https://github.com/Automattic/mongoose/issues/8222",
+            "https://github.com/Automattic/mongoose/commit/f3eca5b94d822225c04e96cbeed9f095afb3c31c",
+            "https://github.com/Automattic/mongoose/commit/f88eb2524b65a68ff893c90a03c04f0913c1913e",
+            "https://github.com/Automattic/mongoose",
+            "https://github.com/Automattic/mongoose/commits/4.13.21",
+            "https://github.com/Automattic/mongoose/releases/tag/4.13.21"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9.1,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2023-3696",
+          "ghsaId": "GHSA-9M93-W8W6-76HH",
+          "aliases": [
+            "CVE-2023-3696",
+            "GHSA-9M93-W8W6-76HH"
+          ],
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "critical",
+          "description": "Prototype Pollution in GitHub repository automattic/mongoose prior to 7.3.3, 6.11.3, and 5.13.20.",
+          "fixedVersions": "5.13.20",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-3696",
+            "https://github.com/Automattic/mongoose/commit/e29578d2ec18a68aeb4717d66dd5eb66bae53de1",
+            "https://github.com/Automattic/mongoose/commit/f1efabf350522257364aa5c2cb36e441cf08f1a2",
+            "https://github.com/automattic/mongoose/commit/305ce4ff789261df7e3f6e72363d0703e025f80d",
+            "https://github.com/Automattic/mongoose",
+            "https://github.com/Automattic/mongoose/releases/tag/7.3.3",
+            "https://huntr.dev/bounties/1eef5a72-f6ab-4f61-b31d-fc66f5b4b467"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 10,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2022-2564",
+          "ghsaId": "GHSA-F825-F98C-GJ3G",
+          "aliases": [
+            "CVE-2022-2564",
+            "GHSA-F825-F98C-GJ3G"
+          ],
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "high",
+          "description": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Affected versions of this package are vulnerable to Prototype Pollution. The `Schema.path()` function is vulnerable to prototype pollution when setting the schema object. This vulnerability allows modification of the Object prototype and could be manipulated into a Denial of Service (DoS) attack.",
+          "fixedVersions": "5.13.15",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-2564",
+            "https://github.com/Automattic/mongoose/commit/99b418941e2fc974199b8e5bd9d382bb50bf680a",
+            "https://github.com/automattic/mongoose/commit/a45cfb6b0ce0067ae9794cfa80f7917e1fb3c6f8",
+            "https://github.com/Automattic/mongoose/blob/51e758541763b6f14569744ced15cc23ab8b50c6/lib/schema.js#L88-L141",
+            "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
+            "https://github.com/Automattic/mongoose/compare/6.4.5...6.4.6",
+            "https://github.com/automattic/mongoose",
+            "https://huntr.dev/bounties/055be524-9296-4b2f-b68d-6d5b810d1ddd"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2022-24304",
+          "ghsaId": "GHSA-H8HF-X3F4-XWGP",
+          "aliases": [
+            "CVE-2022-24304",
+            "GHSA-H8HF-X3F4-XWGP"
+          ],
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "critical",
+          "description": "### Description\nMongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.\n\nAffected versions of this package are vulnerable to Prototype Pollution. The `Schema.path()` function is vulnerable to prototype pollution when setting the `schema` object. This vulnerability allows modification of the Object prototype and could be manipulated into a Denial of Service (DoS) attack.\n\n### Proof of Concept\n```js\n// poc.js\nconst mongoose = require('mongoose');\nconst schema = new mongoose.Schema();\n\nmalicious_payload = '__proto__.toString'\n\nschema.path(malicious_payload, [String])\n\nx = {}\nconsole.log(x.toString()) // crashed (Denial of service (DoS) attack)\n```\n\n### Impact\nThis vulnerability can be manipulated to exploit other types of attacks, such as Denial of service (DoS), Remote Code Execution, or Property Injection.",
+          "fixedVersions": "5.13.15",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-24304",
+            "https://github.com/Automattic/mongoose/issues/12085",
+            "https://github.com/Automattic/mongoose/commit/6a197316564742c0422309e1b5fecfa4faec126e",
+            "https://github.com/Automattic/mongoose/commit/a45cfb6b0ce0067ae9794cfa80f7917e1fb3c6f8",
+            "https://github.com/Automattic/mongoose/blob/51e758541763b6f14569744ced15cc23ab8b50c6/lib/schema.js#L88-L141",
+            "https://huntr.dev/bounties/055be524-9296-4b2f-b68d-6d5b810d1ddd"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9.8,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2024-53900",
+          "ghsaId": "GHSA-M7XQ-9374-9RVX",
+          "aliases": [
+            "CVE-2024-53900",
+            "GHSA-M7XQ-9374-9RVX"
+          ],
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "high",
+          "description": "Mongoose versions prior to 8.8.3, 7.8.3, 6.13.5, and 5.13.23 are vulnerable to improper use of the $where operator. This vulnerability arises from the ability of the $where clause to execute arbitrary JavaScript code in MongoDB queries, potentially leading to code injection attacks and unauthorized access or manipulation of database data.",
+          "fixedVersions": "5.13.23",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-53900",
+            "https://github.com/github/advisory-database/pull/6769",
+            "https://github.com/github/advisory-database/pull/6776",
+            "https://github.com/Automattic/mongoose/commit/33679bcf8ca43d74e3e8ecd4cc224826772d805b",
+            "https://github.com/Automattic/mongoose/commit/bbb6fa7ecb44bbaf5bea955d886378a1247bce0b",
+            "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156",
+            "https://github.com/Automattic/mongoose",
+            "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
+            "https://github.com/Automattic/mongoose/compare/6.13.4...6.13.5",
+            "https://github.com/Automattic/mongoose/compare/7.8.2...7.8.3",
+            "https://github.com/Automattic/mongoose/compare/8.8.2...8.8.3",
+            "https://github.com/Automattic/mongoose/releases",
+            "https://www.npmjs.com/package/mongoose?activeTab=versions"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "GHSA-R5XW-Q988-826M",
+          "ghsaId": "GHSA-R5XW-Q988-826M",
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "medium",
+          "description": "Versions of `mongoose` before 4.3.6, 3.8.39 are vulnerable to remote memory exposure.\n\nTrying to save a number to a field of type Buffer on the affected mongoose versions allocates a chunk of uninitialized memory and stores it in the database.\n\n\n## Recommendation\n\nUpdate to version 4.3.6, 3.8.39 or later.",
+          "fixedVersions": "4.3.6",
+          "references": [
+            "https://github.com/Automattic/mongoose/issues/3764",
+            "https://gist.github.com/ChALkeR/440bc3dfcbd9b6da75c3",
+            "https://gist.github.com/ChALkeR/d4a8055625221b6e65f0",
+            "https://www.npmjs.com/advisories/599"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.1,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2025-23061",
+          "ghsaId": "GHSA-VG7J-7CWX-8WGW",
+          "aliases": [
+            "CVE-2025-23061",
+            "GHSA-VG7J-7CWX-8WGW"
+          ],
+          "packageName": "mongoose",
+          "packageVersion": "4.2.4",
+          "severity": "critical",
+          "description": "Mongoose versions prior to 8.9.5, 7.8.4, and 6.13.6 are vulnerable to improper use of the `$where` operator. This vulnerability arises from the ability of the `$where` clause to execute arbitrary JavaScript code in MongoDB queries, potentially leading to code injection attacks and unauthorized access or manipulation of database data.\n\nNOTE: this issue exists because of an incomplete fix for CVE-2024-53900.",
+          "fixedVersions": "6.13.6",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-23061",
+            "https://github.com/Automattic/mongoose/commit/64a9f9706f2428c49e0cfb8e223065acc645f7bc",
+            "https://github.com/Automattic/mongoose",
+            "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
+            "https://github.com/Automattic/mongoose/compare/6.13.5...6.13.6",
+            "https://github.com/Automattic/mongoose/compare/7.8.3...7.8.4",
+            "https://github.com/Automattic/mongoose/compare/8.9.4...8.9.5",
+            "https://github.com/Automattic/mongoose/releases/tag/6.13.6",
+            "https://github.com/Automattic/mongoose/releases/tag/7.8.4",
+            "https://github.com/Automattic/mongoose/releases/tag/8.9.5",
+            "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
+            "https://www.npmjs.com/package/mongoose?activeTab=versions"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "mongoose"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2017-1000228",
+          "ghsaId": "GHSA-3W5V-P54C-F74X",
+          "aliases": [
+            "CVE-2017-1000228",
+            "GHSA-3W5V-P54C-F74X"
+          ],
+          "packageName": "ejs",
+          "packageVersion": "1.0.0",
+          "severity": "critical",
+          "description": "nodejs ejs versions older than 2.5.3 is vulnerable to remote code execution due to weak input validation in `ejs.renderFile()` function",
+          "fixedVersions": "2.5.5",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-1000228",
+            "https://github.com/advisories/GHSA-3w5v-p54c-f74x",
+            "https://snyk.io/vuln/npm:ejs:20161128",
+            "https://web.archive.org/web/20171123041219/http://www.securityfocus.com/bid/101897"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ejs@1.0.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9.8,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "ejs"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2017-1000189",
+          "ghsaId": "GHSA-6X77-RPQF-J6MW",
+          "aliases": [
+            "CVE-2017-1000189",
+            "GHSA-6X77-RPQF-J6MW"
+          ],
+          "packageName": "ejs",
+          "packageVersion": "1.0.0",
+          "severity": "high",
+          "description": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in `ejs.renderFile()`",
+          "fixedVersions": "2.5.5",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-1000189",
+            "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f",
+            "https://github.com/advisories/GHSA-6x77-rpqf-j6mw",
+            "https://github.com/mde/ejs",
+            "https://web.archive.org/web/20171123041449/http://www.securityfocus.com/bid/101893"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ejs@1.0.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "ejs"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2024-33883",
+          "ghsaId": "GHSA-GHR5-CH3P-VCR6",
+          "aliases": [
+            "CVE-2024-33883",
+            "GHSA-GHR5-CH3P-VCR6"
+          ],
+          "packageName": "ejs",
+          "packageVersion": "1.0.0",
+          "severity": "medium",
+          "description": "The ejs (aka Embedded JavaScript templates) package before 3.1.10 for Node.js lacks certain pollution protection.",
+          "fixedVersions": "3.1.10",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-33883",
+            "https://github.com/mde/ejs/commit/e469741dca7df2eb400199e1cdb74621e3f89aa5",
+            "https://github.com/mde/ejs",
+            "https://github.com/mde/ejs/compare/v3.1.9...v3.1.10",
+            "https://security.netapp.com/advisory/ntap-20240605-0003"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ejs@1.0.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.5,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "ejs"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2017-1000188",
+          "ghsaId": "GHSA-HWCF-PP87-7X6P",
+          "aliases": [
+            "CVE-2017-1000188",
+            "GHSA-HWCF-PP87-7X6P"
+          ],
+          "packageName": "ejs",
+          "packageVersion": "1.0.0",
+          "severity": "medium",
+          "description": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the `ejs.renderFile()` resulting in code injection",
+          "fixedVersions": "2.5.5",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-1000188",
+            "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f",
+            "https://github.com/advisories/GHSA-hwcf-pp87-7x6p",
+            "https://github.com/mde/ejs",
+            "https://web.archive.org/web/20200227134555/http://www.securityfocus.com/bid/101889"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ejs@1.0.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 6.1,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "ejs"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2022-29078",
+          "ghsaId": "GHSA-PHWQ-J96M-2C2Q",
+          "aliases": [
+            "CVE-2022-29078",
+            "GHSA-PHWQ-J96M-2C2Q"
+          ],
+          "packageName": "ejs",
+          "packageVersion": "1.0.0",
+          "severity": "critical",
+          "description": "The ejs (aka Embedded JavaScript templates) package 3.1.6 for Node.js allows server-side template injection in settings[view options][outputFunctionName]. This is parsed as an internal option, and overwrites the outputFunctionName option with an arbitrary OS command (which is executed upon template compilation).",
+          "fixedVersions": "3.1.7",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-29078",
+            "https://github.com/mde/ejs/commit/15ee698583c98dadc456639d6245580d17a24baf",
+            "https://eslam.io/posts/ejs-server-side-template-injection-rce",
+            "https://github.com/mde/ejs",
+            "https://github.com/mde/ejs/releases",
+            "https://security.netapp.com/advisory/ntap-20220804-0001"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ejs@1.0.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9.8,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "ejs"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2020-13110",
+          "ghsaId": "GHSA-M2MX-RFPW-JGHV",
+          "aliases": [
+            "CVE-2020-13110",
+            "GHSA-M2MX-RFPW-JGHV"
+          ],
+          "packageName": "kerberos",
+          "packageVersion": "0.0.24",
+          "severity": "high",
+          "description": "Version of `kerberos` prior to 1.0.0 are vulnerable to DLL Injection. The package loads DLLs without specifying a full path. This may allow attackers to create a file with the same name in a folder that precedes the intended file in the DLL path search. Doing so would allow attackers to execute arbitrary code in the machine.\n\n\n## Recommendation\n\nUpgrade to version 1.0.0 or later.",
+          "fixedVersions": "1.0.0",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-13110",
+            "https://github.com/mongodb-js/kerberos",
+            "https://medium.com/@kiddo_Ha3ker/dll-injection-attack-in-kerberos-npm-package-cb4b32031cd",
+            "https://www.linkedin.com/posts/op-innovate_dll-injection-attack-in-kerberos-npm-package-activity-6667043749547253760-kVlW",
+            "https://www.npmjs.com/advisories/1514",
+            "https://www.op-c.net/2020/05/15/dll-injection-attack-in-kerberos-npm-package"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/kerberos@0.0.24",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.8,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongodb",
+            "mongodb-core",
+            "kerberos"
+          ],
+          "parentPackages": [
+            "mongodb@3.7.4",
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "GHSA-MH5C-679W-HH4R",
+          "ghsaId": "GHSA-MH5C-679W-HH4R",
+          "packageName": "mongodb",
+          "packageVersion": "2.0.46",
+          "severity": "high",
+          "description": "Versions of `mongodb` prior to 3.1.13 are vulnerable to Denial of Service. The package fails to properly catch an exception when a collection name is invalid and the DB does not exist, crashing the application.\n\n\n## Recommendation\n\nUpgrade to version 3.1.13 or later.",
+          "fixedVersions": "3.1.13",
+          "references": [
+            "https://www.npmjs.com/advisories/1203"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongodb@2.0.46",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 0,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongoose",
+            "mongodb"
+          ],
+          "parentPackages": [
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2019-2391",
+          "ghsaId": "GHSA-4JWP-VFVF-657P",
+          "aliases": [
+            "CVE-2019-2391",
+            "GHSA-4JWP-VFVF-657P"
+          ],
+          "packageName": "bson",
+          "packageVersion": "0.4.23",
+          "severity": "medium",
+          "description": "Incorrect parsing of certain JSON input may result in js-bson not correctly serializing BSON. This may cause unexpected application behaviour including data disclosure.",
+          "fixedVersions": "1.1.4",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-2391",
+            "https://github.com/mongodb/js-bson",
+            "https://github.com/mongodb/js-bson/releases/tag/v1.1.4"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bson@0.4.23",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.4,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongodb",
+            "bson"
+          ],
+          "parentPackages": [
+            "mongodb@3.7.4",
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2020-7610",
+          "ghsaId": "GHSA-V8W9-2789-6HHR",
+          "aliases": [
+            "CVE-2020-7610",
+            "GHSA-V8W9-2789-6HHR"
+          ],
+          "packageName": "bson",
+          "packageVersion": "0.4.23",
+          "severity": "critical",
+          "description": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsontype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
+          "fixedVersions": "1.1.4",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7610",
+            "https://github.com/mongodb/js-bson/commit/3809c1313a7b2a8001065f0271199df9fa3d16a8",
+            "https://snyk.io/vuln/SNYK-JS-BSON-561052"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bson@0.4.23",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9.8,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongodb",
+            "bson"
+          ],
+          "parentPackages": [
+            "mongodb@3.7.4",
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2017-20165",
+          "ghsaId": "GHSA-9VVW-CC9W-F27H",
+          "aliases": [
+            "CVE-2017-20165",
+            "GHSA-9VVW-CC9W-F27H"
+          ],
+          "packageName": "debug",
+          "packageVersion": "2.2.0",
+          "severity": "high",
+          "description": "A vulnerability classified as problematic has been found in debug-js debug up to 3.0.x. This affects the function useColors of the file src/node.js. The manipulation of the argument str leads to inefficient regular expression complexity. Upgrading to version 3.1.0 is able to address this issue. The name of the patch is c38a0166c266a679c8de012d4eaccec3f944e685. It is recommended to upgrade the affected component. The identifier VDB-217665 was assigned to this vulnerability. The patch has been backported to the 2.6.x branch in version 2.6.9.",
+          "fixedVersions": "2.6.9",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-20165",
+            "https://github.com/debug-js/debug/pull/504",
+            "https://github.com/debug-js/debug/commit/c38a0166c266a679c8de012d4eaccec3f944e685",
+            "https://github.com/debug-js/debug/commit/f53962e944a87e6ca9bb622a2a12dffc22a9bb5a",
+            "https://github.com/debug-js/debug",
+            "https://github.com/debug-js/debug/releases/tag/2.6.9",
+            "https://github.com/debug-js/debug/releases/tag/3.1.0",
+            "https://vuldb.com/?ctiid.217665",
+            "https://vuldb.com/?id.217665"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/debug@2.2.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "nodemon",
+            "debug"
+          ],
+          "parentPackages": [
+            "nodemon@2.0.22",
+            "morgan@1.12.1",
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2017-16137",
+          "ghsaId": "GHSA-GXPJ-CX7G-858C",
+          "aliases": [
+            "CVE-2017-16137",
+            "GHSA-GXPJ-CX7G-858C"
+          ],
+          "packageName": "debug",
+          "packageVersion": "2.2.0",
+          "severity": "low",
+          "description": "Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. \n\nAs it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.\n\nThis was later re-introduced in version v3.2.0, and then repatched in versions 3.2.7 and 4.3.1.\n\n## Recommendation\n\nVersion 2.x.x: Update to version 2.6.9 or later.\nVersion 3.1.x: Update to version 3.1.0 or later.\nVersion 3.2.x: Update to version 3.2.7 or later.\nVersion 4.x.x: Update to version 4.3.1 or later.",
+          "fixedVersions": "2.6.9",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-16137",
+            "https://github.com/debug-js/debug/issues/797",
+            "https://github.com/visionmedia/debug/issues/501",
+            "https://github.com/visionmedia/debug/pull/504",
+            "https://github.com/debug-js/debug/commit/4e2150207c568adb9ead8f4c4528016081c88020",
+            "https://github.com/debug-js/debug/commit/71169065b5262f9858ac78cc0b688c84a438f290",
+            "https://github.com/debug-js/debug/commit/b6d12fdbc63b483e5c969da33ea6adc09946b5ac",
+            "https://github.com/debug-js/debug/commit/f53962e944a87e6ca9bb622a2a12dffc22a9bb5a",
+            "https://github.com/visionmedia/debug",
+            "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3@%3Ccommits.netbeans.apache.org%3E",
+            "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63@%3Cnotifications.netbeans.apache.org%3E"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/debug@2.2.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 3.7,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "nodemon",
+            "debug"
+          ],
+          "parentPackages": [
+            "nodemon@2.0.22",
+            "morgan@1.12.1",
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2022-25883",
+          "ghsaId": "GHSA-C2QF-RXJJ-QQGW",
+          "aliases": [
+            "CVE-2022-25883",
+            "GHSA-C2QF-RXJJ-QQGW"
+          ],
+          "packageName": "semver",
+          "packageVersion": "7.0.0",
+          "severity": "high",
+          "description": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+          "fixedVersions": "7.5.2",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-25883",
+            "https://github.com/npm/node-semver/pull/564",
+            "https://github.com/npm/node-semver/pull/585",
+            "https://github.com/npm/node-semver/pull/593",
+            "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0",
+            "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441",
+            "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c",
+            "https://github.com/npm/node-semver",
+            "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104",
+            "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js#L138",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js#L160",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160",
+            "https://security.netapp.com/advisory/ntap-20241025-0004",
+            "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/semver@7.0.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "nodemon",
+            "semver"
+          ],
+          "parentPackages": [
+            "nodemon@2.0.22",
+            "snyk@1.1307.2"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Classified as non-runtime dependency; not part of application runtime code path."
+        },
+        {
+          "cveId": "CVE-2017-20162",
+          "ghsaId": "GHSA-W9MR-4MFR-499F",
+          "aliases": [
+            "CVE-2017-20162",
+            "GHSA-W9MR-4MFR-499F"
+          ],
+          "packageName": "ms",
+          "packageVersion": "0.7.1",
+          "severity": "medium",
+          "description": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The name of the patch is caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+          "fixedVersions": "2.0.0",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-20162",
+            "https://github.com/vercel/ms/pull/89",
+            "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+            "https://github.com/vercel/ms",
+            "https://github.com/vercel/ms/releases/tag/2.0.0",
+            "https://security.netapp.com/advisory/ntap-20241108-0002",
+            "https://vuldb.com/?ctiid.217451",
+            "https://vuldb.com/?id.217451"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ms@0.7.1",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.3,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongoose",
+            "ms"
+          ],
+          "parentPackages": [
+            "mongoose@4.2.4",
+            "nodemon@2.0.22",
+            "morgan@1.12.1"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2024-45590",
+          "ghsaId": "GHSA-QWCR-R2FM-QRC7",
+          "aliases": [
+            "CVE-2024-45590",
+            "GHSA-QWCR-R2FM-QRC7"
+          ],
+          "packageName": "body-parser",
+          "packageVersion": "1.9.0",
+          "severity": "high",
+          "description": "### Impact\n\nbody-parser <1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service.\n\n### Patches\n\nthis issue is patched in 1.20.3\n\n### References\n",
+          "fixedVersions": "1.20.3",
+          "references": [
+            "https://github.com/expressjs/body-parser/security/advisories/GHSA-qwcr-r2fm-qrc7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-45590",
+            "https://github.com/expressjs/body-parser/commit/b2695c4450f06ba3b0ccf48d872a229bb41c9bce",
+            "https://github.com/expressjs/body-parser"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/body-parser@1.9.0",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "body-parser"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2025-15284",
+          "ghsaId": "GHSA-6RW7-VPXM-498P",
+          "aliases": [
+            "CVE-2025-15284",
+            "GHSA-6RW7-VPXM-498P"
+          ],
+          "packageName": "qs",
+          "packageVersion": "2.2.4",
+          "severity": "medium",
+          "description": "### Summary\n\nThe `arrayLimit` option in qs did not enforce limits for bracket notation (`a[]=1&a[]=2`), only for indexed notation (`a[0]=1`). This is a consistency bug; `arrayLimit` should apply uniformly across all array notations.\n\n**Note:** The default `parameterLimit` of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than `parameterLimit` regardless of `arrayLimit`, because each `a[]=value` consumes one parameter slot. The severity has been reduced accordingly.\n\n### Details\n\nThe `arrayLimit` option only checked limits for indexed notation (`a[0]=1&a[1]=2`) but did not enforce it for bracket notation (`a[]=1&a[]=2`).\n\n**Vulnerable code** (`lib/parse.js:159-162`):\n```javascript\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n```\n\n**Working code** (`lib/parse.js:175`):\n```javascript\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n```\n\nThe bracket notation handler at line 159 uses `utils.combine([], leaf)` without validating against `options.arrayLimit`, while indexed notation at line 175 checks `index <= options.arrayLimit` before creating arrays.\n\n### PoC\n\n```javascript\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n```\n\n**Note on parameterLimit interaction:** The original advisory's \"DoS demonstration\" claimed a length of 10,000, but `parameterLimit` (default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\n### Impact\n\nConsistency bug in `arrayLimit` enforcement. With default `parameterLimit`, the practical DoS risk is negligible since `parameterLimit` already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when `parameterLimit` is explicitly set to a very high value.",
+          "fixedVersions": "6.14.1",
+          "references": [
+            "https://github.com/ljharb/qs/security/advisories/GHSA-6rw7-vpxm-498p",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-15284",
+            "https://github.com/ljharb/qs/commit/3086902ecf7f088d0d1803887643ac6c03d415b9",
+            "https://github.com/ljharb/qs"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/qs@2.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "body-parser",
+            "qs"
+          ],
+          "parentPackages": [
+            "body-parser@1.9.0",
+            "browserify@13.3.0"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2017-1000048",
+          "ghsaId": "GHSA-GQGV-6JQ5-JJJ9",
+          "aliases": [
+            "CVE-2017-1000048",
+            "GHSA-GQGV-6JQ5-JJJ9"
+          ],
+          "packageName": "qs",
+          "packageVersion": "2.2.4",
+          "severity": "high",
+          "description": "Affected version of `qs` are vulnerable to Prototype Pollution because it is possible to bypass the protection. The `qs.parse` function fails to properly prevent an object's prototype to be altered when parsing arbitrary input. Input containing `[` or `]` may bypass the prototype pollution protection and alter the Object prototype. This allows attackers to override properties that will exist in all objects, which may lead to Denial of Service or Remote Code Execution in specific circumstances.\n\n\n## Recommendation\n\nUpgrade to 6.0.4, 6.1.2, 6.2.3, 6.3.2 or later.",
+          "fixedVersions": "6.0.4",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-1000048",
+            "https://github.com/ljharb/qs/issues/200",
+            "https://github.com/ljharb/qs/commit/beade029171b8cef9cee0d03ebe577e2dd84976d",
+            "https://access.redhat.com/errata/RHSA-2017:2672",
+            "https://github.com/ljharb/qs",
+            "https://snyk.io/vuln/npm:qs:20170213",
+            "https://www.npmjs.com/advisories/1469"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/qs@2.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "body-parser",
+            "qs"
+          ],
+          "parentPackages": [
+            "body-parser@1.9.0",
+            "browserify@13.3.0"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2022-24999",
+          "ghsaId": "GHSA-HRPP-H998-J3PP",
+          "aliases": [
+            "CVE-2022-24999",
+            "GHSA-HRPP-H998-J3PP"
+          ],
+          "packageName": "qs",
+          "packageVersion": "2.2.4",
+          "severity": "high",
+          "description": "qs before 6.10.3 allows attackers to cause a Node process hang because an `__ proto__` key can be used. In many typical web framework use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as `a[__proto__]=b&a[__proto__]&a[length]=100000000`. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4.",
+          "fixedVersions": "6.2.4",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-24999",
+            "https://github.com/ljharb/qs/pull/428",
+            "https://github.com/ljharb/qs/commit/4310742efbd8c03f6495f07906b45213da0a32ec",
+            "https://github.com/ljharb/qs/commit/727ef5d34605108acb3513f72d5435972ed15b68",
+            "https://github.com/ljharb/qs/commit/73205259936317b40f447c5cdb71c5b341848e1b",
+            "https://github.com/ljharb/qs/commit/8b4cc14cda94a5c89341b77e5fe435ec6c41be2d",
+            "https://github.com/ljharb/qs/commit/ba24e74dd17931f825adb52f5633e48293b584e1",
+            "https://github.com/ljharb/qs/commit/e799ba57e573a30c14b67c1889c7c04d508b9105",
+            "https://github.com/ljharb/qs/commit/ed0f5dcbef4b168a8ae299d78b1e4a2e9b1baf1f",
+            "https://github.com/ljharb/qs/commit/f945393cfe442fe8c6e62b4156fd35452c0686ee",
+            "https://github.com/ljharb/qs/commit/fc3682776670524a42e19709ec4a8138d0d7afda",
+            "https://github.com/expressjs/express/releases/tag/4.17.3",
+            "https://github.com/ljharb/qs",
+            "https://github.com/n8tz/CVE-2022-24999",
+            "https://lists.debian.org/debian-lts-announce/2023/01/msg00039.html",
+            "https://security.netapp.com/advisory/ntap-20230908-0005"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/qs@2.2.4",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 7.5,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "body-parser",
+            "qs"
+          ],
+          "parentPackages": [
+            "body-parser@1.9.0",
+            "browserify@13.3.0"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        },
+        {
+          "cveId": "CVE-2020-7699",
+          "ghsaId": "GHSA-9WCG-JRWF-8GG7",
+          "aliases": [
+            "CVE-2020-7699",
+            "GHSA-9WCG-JRWF-8GG7"
+          ],
+          "packageName": "express-fileupload",
+          "packageVersion": "0.0.5",
+          "severity": "critical",
+          "description": "This affects the package express-fileupload before 1.1.8. If the parseNested option is enabled, sending a corrupt HTTP request can lead to denial of service or arbitrary code execution.",
+          "fixedVersions": "1.1.9",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7699",
+            "https://github.com/richardgirges/express-fileupload/issues/236",
+            "https://github.com/richardgirges/express-fileupload/pull/237",
+            "https://github.com/richardgirges/express-fileupload/commit/db495357d7557ceb5c034de91a7a574bd12f9b9f",
+            "https://github.com/richardgirges/express-fileupload",
+            "https://security.netapp.com/advisory/ntap-20200821-0003",
+            "https://snyk.io/vuln/SNYK-JS-EXPRESSFILEUPLOAD-595969"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/express-fileupload@0.0.5",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 9.8,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "express-fileupload"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "GHSA-Q3W9-G74Q-VP5F",
+          "ghsaId": "GHSA-Q3W9-G74Q-VP5F",
+          "packageName": "express-fileupload",
+          "packageVersion": "0.0.5",
+          "severity": "low",
+          "description": "Versions of `express-fileupload` prior to 1.1.6-alpha.6 are vulnerable to Denial of Service. The package causes server responses to be delayed (up to 30s in internal testing) if the request contains a large `filename` of `.` characters.\n\n\n\n\n## Recommendation\n\nUpgrade to version 1.1.6-alpha.6 or later.",
+          "fixedVersions": "1.1.6-alpha.6",
+          "references": [
+            "https://www.npmjs.com/advisories/1216"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/express-fileupload@0.0.5",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 0,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "express-fileupload"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2022-27261",
+          "ghsaId": "GHSA-W4M6-X6C2-J5C9",
+          "aliases": [
+            "CVE-2022-27261",
+            "GHSA-W4M6-X6C2-J5C9"
+          ],
+          "packageName": "express-fileupload",
+          "packageVersion": "0.0.5",
+          "severity": "high",
+          "description": "An arbitrary file write vulnerability in Express-FileUpload v1.3.1 allows attackers to upload multiple files with the same name, causing an overwrite of files in the web application server. This vulnerability is [debated by the package author](https://github.com/richardgirges/express-fileupload/issues/316).",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-27261",
+            "https://github.com/richardgirges/express-fileupload/issues/312",
+            "https://github.com/richardgirges/express-fileupload/issues/316",
+            "https://github.com/richardgirges/express-fileupload",
+            "https://www.npmjs.com/package/express-fileupload",
+            "https://www.youtube.com/watch?v=3ROHB3ck4tA"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/express-fileupload@0.0.5",
+          "manifestPath": "package.json",
+          "fixState": "wont-fix",
+          "score": 7.5,
+          "dependencyType": "direct",
+          "dependencyPath": [
+            "express-fileupload"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "No package import/reference detected in scanned source code."
+        },
+        {
+          "cveId": "CVE-2020-35149",
+          "ghsaId": "GHSA-45Q2-34RF-MR94",
+          "aliases": [
+            "CVE-2020-35149",
+            "GHSA-45Q2-34RF-MR94"
+          ],
+          "packageName": "mquery",
+          "packageVersion": "1.6.3",
+          "severity": "medium",
+          "description": "lib/utils.js in mquery before 3.2.3 allows a pollution attack because a special property (e.g., __proto__) can be copied during a merge or clone operation.",
+          "fixedVersions": "3.2.3",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-35149",
+            "https://github.com/aheckmann/mquery/commit/792e69fd0a7281a0300be5cade5a6d7c1d468ad4"
+          ],
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mquery@1.6.3",
+          "manifestPath": "package.json",
+          "fixState": "fixed",
+          "score": 5.3,
+          "dependencyType": "transitive",
+          "dependencyPath": [
+            "mongoose",
+            "mquery"
+          ],
+          "parentPackages": [
+            "mongoose@4.2.4"
+          ],
+          "source": "manifest_file",
+          "isUsed": false,
+          "usageReason": "Resolved as transitive dependency; no direct package-level code usage signal."
+        }
+      ]
+    },
+    "sbom": {
+      "scanId": "",
+      "repositoryName": "nodejs-goof-test",
+      "total": 305,
+      "packages": [
+        {
+          "name": "ports",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ports@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "through2",
+          "version": "2.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/through2@2.0.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "xtend@4.0.2"
+          ]
+        },
+        {
+          "name": "readable-stream",
+          "version": "2.0.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/readable-stream@2.0.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "string_decoder@0.10.31",
+            "string_decoder@1.1.1",
+            "util-deprecate@1.0.2",
+            "core-util-is@1.0.3",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "isarray@2.0.5",
+            "isarray@0.0.1",
+            "isarray@1.0.0",
+            "process-nextick-args@2.0.1",
+            "process-nextick-args@1.0.7",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "string_decoder",
+          "version": "0.10.31",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/string_decoder@0.10.31",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "safe-buffer",
+          "version": "5.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/safe-buffer@5.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "safe-buffer",
+          "version": "5.2.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/safe-buffer@5.2.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "string_decoder",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/string_decoder@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "util-deprecate",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/util-deprecate@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "core-util-is",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/core-util-is@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "inherits",
+          "version": "2.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/inherits@2.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "inherits",
+          "version": "2.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/inherits@2.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "isarray",
+          "version": "2.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/isarray@2.0.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "isarray",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/isarray@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "isarray",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/isarray@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "process-nextick-args",
+          "version": "2.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/process-nextick-args@2.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "process-nextick-args",
+          "version": "1.0.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/process-nextick-args@1.0.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "readable-stream",
+          "version": "1.0.31",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/readable-stream@1.0.31",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "util-deprecate@1.0.2",
+            "core-util-is@1.0.3",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "isarray@2.0.5",
+            "isarray@0.0.1",
+            "isarray@1.0.0",
+            "process-nextick-args@2.0.1",
+            "process-nextick-args@1.0.7",
+            "string_decoder@0.10.31",
+            "string_decoder@1.1.1",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "readable-stream",
+          "version": "2.3.8",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/readable-stream@2.3.8",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "core-util-is@1.0.3",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "isarray@2.0.5",
+            "isarray@0.0.1",
+            "isarray@1.0.0",
+            "process-nextick-args@2.0.1",
+            "process-nextick-args@1.0.7",
+            "string_decoder@0.10.31",
+            "string_decoder@1.1.1",
+            "util-deprecate@1.0.2",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "xtend",
+          "version": "4.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/xtend@4.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "inflight",
+          "version": "1.0.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/inflight@1.0.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "wrappy@1.0.2",
+            "once@1.4.0"
+          ]
+        },
+        {
+          "name": "wrappy",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/wrappy@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "once",
+          "version": "1.4.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/once@1.4.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "wrappy@1.0.2"
+          ]
+        },
+        {
+          "name": "path-platform",
+          "version": "0.11.15",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/path-platform@0.11.15",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "resolve",
+          "version": "1.22.12",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/resolve@1.22.12",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "is-core-module@2.16.2",
+            "path-parse@1.0.7",
+            "supports-preserve-symlinks-flag@1.0.0"
+          ]
+        },
+        {
+          "name": "es-errors",
+          "version": "1.3.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/es-errors@1.3.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "is-core-module",
+          "version": "2.16.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-core-module@2.16.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "hasown@2.0.4"
+          ]
+        },
+        {
+          "name": "hasown",
+          "version": "2.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/hasown@2.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "function-bind@1.1.2",
+            "function-bind@1.1.1"
+          ]
+        },
+        {
+          "name": "function-bind",
+          "version": "1.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/function-bind@1.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "function-bind",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/function-bind@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "path-parse",
+          "version": "1.0.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/path-parse@1.0.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "supports-preserve-symlinks-flag",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "denque",
+          "version": "1.5.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/denque@1.5.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "ms",
+          "version": "2.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ms@2.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "constants-browserify",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/constants-browserify@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "nodemon",
+          "version": "2.0.22",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/nodemon@2.0.22",
+          "path": "package.json",
+          "direct": true,
+          "dev": true,
+          "license": "MIT",
+          "dependsOn": [
+            "debug@2.6.9",
+            "debug@2.2.0",
+            "debug@3.2.7",
+            "ignore-by-default@1.0.1",
+            "minimatch@3.1.5",
+            "simple-update-notifier@1.1.0",
+            "supports-color@5.5.0",
+            "touch@3.1.1",
+            "semver@5.7.2",
+            "semver@7.0.0",
+            "semver@7.5.2",
+            "chokidar@3.6.0",
+            "undefsafe@2.0.5",
+            "pstree.remy@1.1.8"
+          ]
+        },
+        {
+          "name": "debug",
+          "version": "2.6.9",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/debug@2.6.9",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "ms@2.1.3",
+            "ms@2.0.0",
+            "ms@0.7.1",
+            "ms@0.7.3"
+          ]
+        },
+        {
+          "name": "ms",
+          "version": "2.1.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ms@2.1.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "ms",
+          "version": "0.7.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ms@0.7.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "ms",
+          "version": "0.7.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ms@0.7.3",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "debug",
+          "version": "2.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/debug@2.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "ms@2.1.3",
+            "ms@2.0.0",
+            "ms@0.7.1",
+            "ms@0.7.3"
+          ]
+        },
+        {
+          "name": "debug",
+          "version": "3.2.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/debug@3.2.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "ms@2.1.3",
+            "ms@2.0.0",
+            "ms@0.7.1",
+            "ms@0.7.3"
+          ]
+        },
+        {
+          "name": "ignore-by-default",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ignore-by-default@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "minimatch",
+          "version": "3.1.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/minimatch@3.1.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "brace-expansion@1.1.18"
+          ]
+        },
+        {
+          "name": "brace-expansion",
+          "version": "1.1.18",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/brace-expansion@1.1.18",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "balanced-match@1.0.2",
+            "concat-map@0.0.1"
+          ]
+        },
+        {
+          "name": "balanced-match",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/balanced-match@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "concat-map",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/concat-map@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "simple-update-notifier",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/simple-update-notifier@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "semver@5.7.2",
+            "semver@7.0.0",
+            "semver@7.5.2"
+          ]
+        },
+        {
+          "name": "semver",
+          "version": "5.7.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/semver@5.7.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "lru-cache@6.0.0"
+          ]
+        },
+        {
+          "name": "lru-cache",
+          "version": "6.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/lru-cache@6.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "yallist@4.0.0"
+          ]
+        },
+        {
+          "name": "yallist",
+          "version": "4.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/yallist@4.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "semver",
+          "version": "7.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/semver@7.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "lru-cache@6.0.0"
+          ]
+        },
+        {
+          "name": "semver",
+          "version": "7.5.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/semver@7.5.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "lru-cache@6.0.0"
+          ]
+        },
+        {
+          "name": "supports-color",
+          "version": "5.5.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/supports-color@5.5.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "has-flag@3.0.0"
+          ]
+        },
+        {
+          "name": "has-flag",
+          "version": "3.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has-flag@3.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "touch",
+          "version": "3.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/touch@3.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "chokidar",
+          "version": "3.6.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/chokidar@3.6.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "fsevents@2.3.3",
+            "anymatch@3.1.3",
+            "braces@3.0.3",
+            "glob-parent@5.1.2",
+            "is-binary-path@2.1.0",
+            "is-glob@4.0.3",
+            "normalize-path@3.0.0",
+            "readdirp@3.6.0"
+          ]
+        },
+        {
+          "name": "fsevents",
+          "version": "2.3.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/fsevents@2.3.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "anymatch",
+          "version": "3.1.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/anymatch@3.1.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "normalize-path@3.0.0",
+            "picomatch@2.3.2"
+          ]
+        },
+        {
+          "name": "normalize-path",
+          "version": "3.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/normalize-path@3.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "picomatch",
+          "version": "2.3.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/picomatch@2.3.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "braces",
+          "version": "3.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/braces@3.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "fill-range@7.1.1"
+          ]
+        },
+        {
+          "name": "fill-range",
+          "version": "7.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/fill-range@7.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "to-regex-range@5.0.1"
+          ]
+        },
+        {
+          "name": "to-regex-range",
+          "version": "5.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/to-regex-range@5.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "is-number@7.0.0"
+          ]
+        },
+        {
+          "name": "is-number",
+          "version": "7.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-number@7.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "glob-parent",
+          "version": "5.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/glob-parent@5.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "is-glob@4.0.3"
+          ]
+        },
+        {
+          "name": "is-glob",
+          "version": "4.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-glob@4.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "is-extglob@2.1.1"
+          ]
+        },
+        {
+          "name": "is-extglob",
+          "version": "2.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-extglob@2.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "is-binary-path",
+          "version": "2.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-binary-path@2.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "binary-extensions@2.3.0"
+          ]
+        },
+        {
+          "name": "binary-extensions",
+          "version": "2.3.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/binary-extensions@2.3.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "readdirp",
+          "version": "3.6.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/readdirp@3.6.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "picomatch@2.3.2"
+          ]
+        },
+        {
+          "name": "undefsafe",
+          "version": "2.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/undefsafe@2.0.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "pstree.remy",
+          "version": "1.1.8",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/pstree.remy@1.1.8",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "shasum-object",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/shasum-object@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "fast-safe-stringify@2.1.1"
+          ]
+        },
+        {
+          "name": "fast-safe-stringify",
+          "version": "2.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/fast-safe-stringify@2.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "browserify",
+          "version": "13.3.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify@13.3.0",
+          "path": "package.json",
+          "direct": true,
+          "dev": true,
+          "license": "MIT",
+          "dependsOn": [
+            "parents@1.0.1",
+            "querystring-es3@0.2.1",
+            "cached-path-relative@1.1.0",
+            "insert-module-globals@7.2.1",
+            "os-browserify@0.1.2",
+            "stream-http@2.8.3",
+            "duplexer2@0.1.4",
+            "stream-browserify@2.0.2",
+            "browser-resolve@1.11.3",
+            "constants-browserify@1.0.0",
+            "https-browserify@0.0.1",
+            "path-browserify@0.0.1",
+            "subarg@1.0.0",
+            "through2@2.0.5",
+            "process@0.11.10",
+            "console-browserify@1.2.0",
+            "events@1.1.1",
+            "module-deps@4.1.1",
+            "read-only-stream@2.0.0",
+            "buffer@4.9.2",
+            "timers-browserify@1.4.2",
+            "punycode@1.4.1",
+            "string_decoder@0.10.31",
+            "string_decoder@1.1.1",
+            "shell-quote@1.10.0",
+            "syntax-error@1.4.0",
+            "xtend@4.0.2",
+            "concat-stream@1.6.2",
+            "concat-stream@1.5.2",
+            "browser-pack@6.1.0",
+            "glob@7.2.3",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "assert@1.5.1",
+            "url@0.11.4",
+            "shasum@1.0.2",
+            "htmlescape@1.1.1",
+            "labeled-stream-splicer@2.0.2",
+            "has@1.0.4",
+            "has@1.0.3",
+            "util@0.10.4",
+            "vm-browserify@0.0.4",
+            "tty-browserify@0.0.1",
+            "browserify-zlib@0.1.4",
+            "defined@1.0.1",
+            "resolve@1.1.7",
+            "resolve@1.22.12",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "domain-browser@1.1.7",
+            "JSONStream@1.3.5",
+            "crypto-browserify@3.12.1",
+            "deps-sort@2.0.1"
+          ]
+        },
+        {
+          "name": "parents",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/parents@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "path-platform@0.11.15"
+          ]
+        },
+        {
+          "name": "querystring-es3",
+          "version": "0.2.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/querystring-es3@0.2.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "cached-path-relative",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/cached-path-relative@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "insert-module-globals",
+          "version": "7.2.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/insert-module-globals@7.2.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "undeclared-identifiers@1.1.3",
+            "acorn-node@1.8.2",
+            "combine-source-map@0.8.0",
+            "concat-stream@1.6.2",
+            "concat-stream@1.5.2",
+            "JSONStream@1.3.5",
+            "xtend@4.0.2",
+            "process@0.11.10",
+            "through2@2.0.5",
+            "is-buffer@1.1.6",
+            "path-is-absolute@1.0.1"
+          ]
+        },
+        {
+          "name": "undeclared-identifiers",
+          "version": "1.1.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/undeclared-identifiers@1.1.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "dash-ast@1.0.0",
+            "get-assigned-identifiers@1.2.0",
+            "simple-concat@1.0.1",
+            "xtend@4.0.2",
+            "acorn-node@1.8.2"
+          ]
+        },
+        {
+          "name": "dash-ast",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/dash-ast@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "get-assigned-identifiers",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/get-assigned-identifiers@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "simple-concat",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/simple-concat@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "acorn-node",
+          "version": "1.8.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/acorn-node@1.8.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "acorn-walk@7.2.0",
+            "xtend@4.0.2",
+            "acorn@5.7.4",
+            "acorn@7.4.1"
+          ]
+        },
+        {
+          "name": "acorn-walk",
+          "version": "7.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/acorn-walk@7.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "acorn",
+          "version": "5.7.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/acorn@5.7.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "acorn",
+          "version": "7.4.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/acorn@7.4.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "combine-source-map",
+          "version": "0.8.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/combine-source-map@0.8.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "source-map@0.5.7",
+            "convert-source-map@1.1.3",
+            "inline-source-map@0.6.3",
+            "lodash.memoize@3.0.4"
+          ]
+        },
+        {
+          "name": "source-map",
+          "version": "0.5.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/source-map@0.5.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": []
+        },
+        {
+          "name": "convert-source-map",
+          "version": "1.1.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/convert-source-map@1.1.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "inline-source-map",
+          "version": "0.6.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/inline-source-map@0.6.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "source-map@0.5.7"
+          ]
+        },
+        {
+          "name": "lodash.memoize",
+          "version": "3.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/lodash.memoize@3.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "concat-stream",
+          "version": "1.6.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/concat-stream@1.6.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "typedarray@0.0.6",
+            "typedarray@0.0.7",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "buffer-from@1.1.2"
+          ]
+        },
+        {
+          "name": "typedarray",
+          "version": "0.0.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/typedarray@0.0.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "typedarray",
+          "version": "0.0.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/typedarray@0.0.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "buffer-from",
+          "version": "1.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/buffer-from@1.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "concat-stream",
+          "version": "1.5.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/concat-stream@1.5.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "typedarray@0.0.6",
+            "typedarray@0.0.7",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "buffer-from@1.1.2"
+          ]
+        },
+        {
+          "name": "JSONStream",
+          "version": "1.3.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/JSONStream@1.3.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "jsonparse@1.3.1",
+            "through@2.3.8"
+          ]
+        },
+        {
+          "name": "jsonparse",
+          "version": "1.3.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/jsonparse@1.3.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "through",
+          "version": "2.3.8",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/through@2.3.8",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "process",
+          "version": "0.11.10",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/process@0.11.10",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "is-buffer",
+          "version": "1.1.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-buffer@1.1.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "path-is-absolute",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/path-is-absolute@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "os-browserify",
+          "version": "0.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/os-browserify@0.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "stream-http",
+          "version": "2.8.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/stream-http@2.8.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "xtend@4.0.2",
+            "builtin-status-codes@3.0.0",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "to-arraybuffer@1.0.1"
+          ]
+        },
+        {
+          "name": "builtin-status-codes",
+          "version": "3.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/builtin-status-codes@3.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "to-arraybuffer",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/to-arraybuffer@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "duplexer2",
+          "version": "0.1.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/duplexer2@0.1.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": [
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8"
+          ]
+        },
+        {
+          "name": "stream-browserify",
+          "version": "2.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/stream-browserify@2.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "browser-resolve",
+          "version": "1.11.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browser-resolve@1.11.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "resolve@1.1.7",
+            "resolve@1.22.12"
+          ]
+        },
+        {
+          "name": "resolve",
+          "version": "1.1.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/resolve@1.1.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "is-core-module@2.16.2",
+            "path-parse@1.0.7",
+            "supports-preserve-symlinks-flag@1.0.0"
+          ]
+        },
+        {
+          "name": "https-browserify",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/https-browserify@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "path-browserify",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/path-browserify@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "subarg",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/subarg@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "minimist@1.2.8"
+          ]
+        },
+        {
+          "name": "minimist",
+          "version": "1.2.8",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/minimist@1.2.8",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "console-browserify",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/console-browserify@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "events",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/events@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "module-deps",
+          "version": "4.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/module-deps@4.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "detective@4.7.1",
+            "parents@1.0.1",
+            "cached-path-relative@1.1.0",
+            "resolve@1.1.7",
+            "resolve@1.22.12",
+            "stream-combiner2@1.1.1",
+            "xtend@4.0.2",
+            "subarg@1.0.0",
+            "browser-resolve@1.11.3",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "defined@1.0.1",
+            "duplexer2@0.1.4",
+            "concat-stream@1.6.2",
+            "concat-stream@1.5.2",
+            "through2@2.0.5",
+            "JSONStream@1.3.5"
+          ]
+        },
+        {
+          "name": "detective",
+          "version": "4.7.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/detective@4.7.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "acorn@5.7.4",
+            "acorn@7.4.1",
+            "defined@1.0.1"
+          ]
+        },
+        {
+          "name": "defined",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/defined@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "stream-combiner2",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/stream-combiner2@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "duplexer2@0.1.4",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8"
+          ]
+        },
+        {
+          "name": "read-only-stream",
+          "version": "2.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/read-only-stream@2.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8"
+          ]
+        },
+        {
+          "name": "buffer",
+          "version": "4.9.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/buffer@4.9.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "base64-js@1.5.1",
+            "ieee754@1.2.1",
+            "isarray@2.0.5",
+            "isarray@0.0.1",
+            "isarray@1.0.0"
+          ]
+        },
+        {
+          "name": "base64-js",
+          "version": "1.5.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/base64-js@1.5.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "ieee754",
+          "version": "1.2.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ieee754@1.2.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": []
+        },
+        {
+          "name": "timers-browserify",
+          "version": "1.4.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/timers-browserify@1.4.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "process@0.11.10"
+          ]
+        },
+        {
+          "name": "punycode",
+          "version": "1.4.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/punycode@1.4.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "shell-quote",
+          "version": "1.10.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/shell-quote@1.10.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "syntax-error",
+          "version": "1.4.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/syntax-error@1.4.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "acorn-node@1.8.2"
+          ]
+        },
+        {
+          "name": "browser-pack",
+          "version": "6.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browser-pack@6.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "through2@2.0.5",
+            "umd@3.0.3",
+            "combine-source-map@0.8.0",
+            "defined@1.0.1",
+            "JSONStream@1.3.5"
+          ]
+        },
+        {
+          "name": "umd",
+          "version": "3.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/umd@3.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "glob",
+          "version": "7.2.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/glob@7.2.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "inflight@1.0.6",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "minimatch@3.1.5",
+            "once@1.4.0",
+            "path-is-absolute@1.0.1",
+            "fs.realpath@1.0.0"
+          ]
+        },
+        {
+          "name": "fs.realpath",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/fs.realpath@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "assert",
+          "version": "1.5.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/assert@1.5.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "util@0.10.4",
+            "object.assign@4.1.7"
+          ]
+        },
+        {
+          "name": "util",
+          "version": "0.10.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/util@0.10.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "object.assign",
+          "version": "4.1.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/object.assign@4.1.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "has-symbols@1.1.0",
+            "has-symbols@1.0.3",
+            "object-keys@1.1.1",
+            "call-bind@1.0.9",
+            "call-bound@1.0.4",
+            "define-properties@1.2.0",
+            "define-properties@1.2.1",
+            "es-object-atoms@1.1.2"
+          ]
+        },
+        {
+          "name": "has-symbols",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has-symbols@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "has-symbols",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has-symbols@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "object-keys",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/object-keys@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "call-bind",
+          "version": "1.0.9",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/call-bind@1.0.9",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0",
+            "set-function-length@1.2.2",
+            "call-bind-apply-helpers@1.0.2",
+            "es-define-property@1.0.1"
+          ]
+        },
+        {
+          "name": "get-intrinsic",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/get-intrinsic@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-define-property@1.0.1",
+            "has-symbols@1.1.0",
+            "has-symbols@1.0.3",
+            "hasown@2.0.4",
+            "call-bind-apply-helpers@1.0.2",
+            "get-proto@1.0.1",
+            "gopd@1.2.0",
+            "math-intrinsics@1.1.0",
+            "es-errors@1.3.0",
+            "function-bind@1.1.2",
+            "function-bind@1.1.1",
+            "es-object-atoms@1.1.2",
+            "has@1.0.4",
+            "has@1.0.3"
+          ]
+        },
+        {
+          "name": "es-define-property",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/es-define-property@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "call-bind-apply-helpers",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/call-bind-apply-helpers@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "function-bind@1.1.2",
+            "function-bind@1.1.1"
+          ]
+        },
+        {
+          "name": "get-proto",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/get-proto@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "dunder-proto@1.0.1",
+            "es-object-atoms@1.1.2"
+          ]
+        },
+        {
+          "name": "dunder-proto",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/dunder-proto@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "call-bind-apply-helpers@1.0.2",
+            "es-errors@1.3.0",
+            "gopd@1.2.0"
+          ]
+        },
+        {
+          "name": "gopd",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/gopd@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "es-object-atoms",
+          "version": "1.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/es-object-atoms@1.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0"
+          ]
+        },
+        {
+          "name": "math-intrinsics",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/math-intrinsics@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "has",
+          "version": "1.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has@1.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "function-bind@1.1.2",
+            "function-bind@1.1.1"
+          ]
+        },
+        {
+          "name": "has",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "function-bind@1.1.2",
+            "function-bind@1.1.1"
+          ]
+        },
+        {
+          "name": "get-intrinsic",
+          "version": "1.3.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/get-intrinsic@1.3.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "function-bind@1.1.2",
+            "function-bind@1.1.1",
+            "es-object-atoms@1.1.2",
+            "es-define-property@1.0.1",
+            "has-symbols@1.1.0",
+            "has-symbols@1.0.3",
+            "hasown@2.0.4",
+            "call-bind-apply-helpers@1.0.2",
+            "get-proto@1.0.1",
+            "gopd@1.2.0",
+            "math-intrinsics@1.1.0",
+            "has@1.0.4",
+            "has@1.0.3"
+          ]
+        },
+        {
+          "name": "set-function-length",
+          "version": "1.2.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/set-function-length@1.2.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "function-bind@1.1.2",
+            "function-bind@1.1.1",
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0",
+            "gopd@1.2.0",
+            "has-property-descriptors@1.0.0",
+            "has-property-descriptors@1.0.2",
+            "define-data-property@1.1.4"
+          ]
+        },
+        {
+          "name": "has-property-descriptors",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has-property-descriptors@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0",
+            "es-define-property@1.0.1"
+          ]
+        },
+        {
+          "name": "has-property-descriptors",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has-property-descriptors@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0",
+            "es-define-property@1.0.1"
+          ]
+        },
+        {
+          "name": "define-data-property",
+          "version": "1.1.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/define-data-property@1.1.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-define-property@1.0.1",
+            "es-errors@1.3.0",
+            "gopd@1.2.0"
+          ]
+        },
+        {
+          "name": "call-bound",
+          "version": "1.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/call-bound@1.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0",
+            "call-bind-apply-helpers@1.0.2"
+          ]
+        },
+        {
+          "name": "define-properties",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/define-properties@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "object-keys@1.1.1",
+            "has-property-descriptors@1.0.0",
+            "has-property-descriptors@1.0.2",
+            "define-data-property@1.1.4"
+          ]
+        },
+        {
+          "name": "define-properties",
+          "version": "1.2.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/define-properties@1.2.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "object-keys@1.1.1",
+            "has-property-descriptors@1.0.0",
+            "has-property-descriptors@1.0.2",
+            "define-data-property@1.1.4"
+          ]
+        },
+        {
+          "name": "url",
+          "version": "0.11.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/url@0.11.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "punycode@1.4.1",
+            "qs@6.16.0",
+            "qs@2.2.4"
+          ]
+        },
+        {
+          "name": "qs",
+          "version": "6.16.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/qs@6.16.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": [
+            "es-define-property@1.0.1",
+            "side-channel@1.1.1"
+          ]
+        },
+        {
+          "name": "side-channel",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/side-channel@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "object-inspect@1.13.4",
+            "side-channel-list@1.0.1",
+            "side-channel-map@1.0.1",
+            "side-channel-weakmap@1.0.2"
+          ]
+        },
+        {
+          "name": "object-inspect",
+          "version": "1.13.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/object-inspect@1.13.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "side-channel-list",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/side-channel-list@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "object-inspect@1.13.4"
+          ]
+        },
+        {
+          "name": "side-channel-map",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/side-channel-map@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "call-bound@1.0.4",
+            "es-errors@1.3.0",
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0",
+            "object-inspect@1.13.4"
+          ]
+        },
+        {
+          "name": "side-channel-weakmap",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/side-channel-weakmap@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "object-inspect@1.13.4",
+            "side-channel-map@1.0.1",
+            "call-bound@1.0.4",
+            "es-errors@1.3.0",
+            "get-intrinsic@1.2.0",
+            "get-intrinsic@1.3.0"
+          ]
+        },
+        {
+          "name": "qs",
+          "version": "2.2.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/qs@2.2.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": [
+            "es-define-property@1.0.1",
+            "side-channel@1.1.1"
+          ]
+        },
+        {
+          "name": "shasum",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/shasum@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "json-stable-stringify@0.0.1",
+            "sha.js@2.4.12"
+          ]
+        },
+        {
+          "name": "json-stable-stringify",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/json-stable-stringify@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "jsonify@0.0.1"
+          ]
+        },
+        {
+          "name": "jsonify",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/jsonify@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "Public Domain",
+          "dependsOn": []
+        },
+        {
+          "name": "sha.js",
+          "version": "2.4.12",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/sha.js@2.4.12",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "to-buffer@1.2.2",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "to-buffer",
+          "version": "1.2.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/to-buffer@1.2.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "isarray@2.0.5",
+            "isarray@0.0.1",
+            "isarray@1.0.0",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "typed-array-buffer@1.0.3"
+          ]
+        },
+        {
+          "name": "typed-array-buffer",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/typed-array-buffer@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "es-errors@1.3.0",
+            "is-typed-array@1.1.15",
+            "call-bound@1.0.4"
+          ]
+        },
+        {
+          "name": "is-typed-array",
+          "version": "1.1.15",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-typed-array@1.1.15",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "which-typed-array@1.1.22"
+          ]
+        },
+        {
+          "name": "which-typed-array",
+          "version": "1.1.22",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/which-typed-array@1.1.22",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "gopd@1.2.0",
+            "has-tostringtag@1.0.2",
+            "available-typed-arrays@1.0.7",
+            "call-bind@1.0.9",
+            "call-bound@1.0.4",
+            "for-each@0.3.5",
+            "get-proto@1.0.1"
+          ]
+        },
+        {
+          "name": "has-tostringtag",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/has-tostringtag@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "has-symbols@1.1.0",
+            "has-symbols@1.0.3"
+          ]
+        },
+        {
+          "name": "available-typed-arrays",
+          "version": "1.0.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/available-typed-arrays@1.0.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "possible-typed-array-names@1.1.0"
+          ]
+        },
+        {
+          "name": "possible-typed-array-names",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/possible-typed-array-names@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "for-each",
+          "version": "0.3.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/for-each@0.3.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "is-callable@1.2.7"
+          ]
+        },
+        {
+          "name": "is-callable",
+          "version": "1.2.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/is-callable@1.2.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "htmlescape",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/htmlescape@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "labeled-stream-splicer",
+          "version": "2.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/labeled-stream-splicer@2.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "stream-splicer@2.0.1",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "stream-splicer",
+          "version": "2.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/stream-splicer@2.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "vm-browserify",
+          "version": "0.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/vm-browserify@0.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "indexof@0.0.1"
+          ]
+        },
+        {
+          "name": "indexof",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/indexof@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "Unknown",
+          "dependsOn": []
+        },
+        {
+          "name": "tty-browserify",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/tty-browserify@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "browserify-zlib",
+          "version": "0.1.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify-zlib@0.1.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "pako@0.2.9"
+          ]
+        },
+        {
+          "name": "pako",
+          "version": "0.2.9",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/pako@0.2.9",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "domain-browser",
+          "version": "1.1.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/domain-browser@1.1.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "crypto-browserify",
+          "version": "3.12.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/crypto-browserify@3.12.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "browserify-sign@4.2.6",
+            "create-ecdh@4.0.4",
+            "hash-base@3.0.5",
+            "hash-base@3.1.2",
+            "randomfill@1.0.4",
+            "create-hmac@1.1.7",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "pbkdf2@3.1.6",
+            "randombytes@2.1.0",
+            "browserify-cipher@1.0.1",
+            "create-hash@1.2.0",
+            "diffie-hellman@5.0.3",
+            "public-encrypt@4.0.3"
+          ]
+        },
+        {
+          "name": "browserify-sign",
+          "version": "4.2.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify-sign@4.2.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "create-hmac@1.1.7",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "browserify-rsa@4.1.1",
+            "create-hash@1.2.0",
+            "elliptic@6.6.1",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "parse-asn1@5.1.9"
+          ]
+        },
+        {
+          "name": "bn.js",
+          "version": "4.12.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bn.js@4.12.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "bn.js",
+          "version": "5.2.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bn.js@5.2.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "create-hmac",
+          "version": "1.1.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/create-hmac@1.1.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "sha.js@2.4.12",
+            "cipher-base@1.0.7",
+            "create-hash@1.2.0",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "ripemd160@2.0.3"
+          ]
+        },
+        {
+          "name": "cipher-base",
+          "version": "1.0.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/cipher-base@1.0.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "to-buffer@1.2.2"
+          ]
+        },
+        {
+          "name": "create-hash",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/create-hash@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "cipher-base@1.0.7",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "md5.js@1.3.5",
+            "ripemd160@2.0.3",
+            "sha.js@2.4.12"
+          ]
+        },
+        {
+          "name": "md5.js",
+          "version": "1.3.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/md5.js@1.3.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "hash-base@3.0.5",
+            "hash-base@3.1.2",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "hash-base",
+          "version": "3.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/hash-base@3.0.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "to-buffer@1.2.2"
+          ]
+        },
+        {
+          "name": "hash-base",
+          "version": "3.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/hash-base@3.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "to-buffer@1.2.2"
+          ]
+        },
+        {
+          "name": "ripemd160",
+          "version": "2.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ripemd160@2.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "hash-base@3.0.5",
+            "hash-base@3.1.2",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "browserify-rsa",
+          "version": "4.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify-rsa@4.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "randombytes@2.1.0",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "randombytes",
+          "version": "2.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/randombytes@2.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "elliptic",
+          "version": "6.6.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/elliptic@6.6.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "minimalistic-assert@1.0.1",
+            "minimalistic-crypto-utils@1.0.1",
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "brorand@1.1.0",
+            "hash.js@1.1.7",
+            "hmac-drbg@1.0.1"
+          ]
+        },
+        {
+          "name": "minimalistic-assert",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/minimalistic-assert@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "minimalistic-crypto-utils",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/minimalistic-crypto-utils@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "brorand",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/brorand@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "hash.js",
+          "version": "1.1.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/hash.js@1.1.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "minimalistic-assert@1.0.1"
+          ]
+        },
+        {
+          "name": "hmac-drbg",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/hmac-drbg@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "minimalistic-crypto-utils@1.0.1",
+            "hash.js@1.1.7",
+            "minimalistic-assert@1.0.1"
+          ]
+        },
+        {
+          "name": "parse-asn1",
+          "version": "5.1.9",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/parse-asn1@5.1.9",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "asn1.js@4.10.1",
+            "browserify-aes@1.2.0",
+            "evp_bytestokey@1.0.3",
+            "pbkdf2@3.1.6",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "asn1.js",
+          "version": "4.10.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/asn1.js@4.10.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "minimalistic-assert@1.0.1"
+          ]
+        },
+        {
+          "name": "browserify-aes",
+          "version": "1.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify-aes@1.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "cipher-base@1.0.7",
+            "create-hash@1.2.0",
+            "evp_bytestokey@1.0.3",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "buffer-xor@1.0.3"
+          ]
+        },
+        {
+          "name": "evp_bytestokey",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/evp_bytestokey@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "md5.js@1.3.5",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "buffer-xor",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/buffer-xor@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "pbkdf2",
+          "version": "3.1.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/pbkdf2@3.1.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "to-buffer@1.2.2",
+            "create-hash@1.2.0",
+            "create-hmac@1.1.7",
+            "ripemd160@2.0.3",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "sha.js@2.4.12"
+          ]
+        },
+        {
+          "name": "create-ecdh",
+          "version": "4.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/create-ecdh@4.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "elliptic@6.6.1"
+          ]
+        },
+        {
+          "name": "randomfill",
+          "version": "1.0.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/randomfill@1.0.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "randombytes@2.1.0",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "browserify-cipher",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify-cipher@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "evp_bytestokey@1.0.3",
+            "browserify-aes@1.2.0",
+            "browserify-des@1.0.2"
+          ]
+        },
+        {
+          "name": "browserify-des",
+          "version": "1.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/browserify-des@1.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "cipher-base@1.0.7",
+            "des.js@1.1.0",
+            "inherits@2.0.3",
+            "inherits@2.0.4",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "des.js",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/des.js@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "minimalistic-assert@1.0.1",
+            "inherits@2.0.3",
+            "inherits@2.0.4"
+          ]
+        },
+        {
+          "name": "diffie-hellman",
+          "version": "5.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/diffie-hellman@5.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "randombytes@2.1.0",
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "miller-rabin@4.0.1"
+          ]
+        },
+        {
+          "name": "miller-rabin",
+          "version": "4.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/miller-rabin@4.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "bn.js@4.12.5",
+            "bn.js@5.2.5",
+            "brorand@1.1.0"
+          ]
+        },
+        {
+          "name": "public-encrypt",
+          "version": "4.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/public-encrypt@4.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "browserify-rsa@4.1.1",
+            "create-hash@1.2.0",
+            "parse-asn1@5.1.9",
+            "randombytes@2.1.0",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "bn.js@4.12.5",
+            "bn.js@5.2.5"
+          ]
+        },
+        {
+          "name": "deps-sort",
+          "version": "2.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/deps-sort@2.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "through2@2.0.5",
+            "JSONStream@1.3.5",
+            "shasum-object@1.0.1",
+            "subarg@1.0.0"
+          ]
+        },
+        {
+          "name": "ee-first",
+          "version": "1.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ee-first@1.0.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "morgan",
+          "version": "1.12.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/morgan@1.12.1",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": [
+            "basic-auth@2.0.1",
+            "debug@2.6.9",
+            "debug@2.2.0",
+            "debug@3.2.7",
+            "depd@1.0.1",
+            "depd@2.0.0",
+            "on-finished@2.1.0",
+            "on-finished@2.4.1",
+            "on-headers@1.1.0"
+          ]
+        },
+        {
+          "name": "basic-auth",
+          "version": "2.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/basic-auth@2.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "depd",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/depd@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "depd",
+          "version": "2.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/depd@2.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "on-finished",
+          "version": "2.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/on-finished@2.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "ee-first@1.0.5",
+            "ee-first@1.1.1"
+          ]
+        },
+        {
+          "name": "ee-first",
+          "version": "1.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ee-first@1.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "on-finished",
+          "version": "2.4.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/on-finished@2.4.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "ee-first@1.0.5",
+            "ee-first@1.1.1"
+          ]
+        },
+        {
+          "name": "on-headers",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/on-headers@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "bytes",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bytes@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "matcher",
+          "version": "3.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/matcher@3.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "escape-string-regexp@4.0.0"
+          ]
+        },
+        {
+          "name": "escape-string-regexp",
+          "version": "4.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/escape-string-regexp@4.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "globalthis",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/globalthis@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "define-properties@1.2.0",
+            "define-properties@1.2.1"
+          ]
+        },
+        {
+          "name": "busboy",
+          "version": "1.6.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/busboy@1.6.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "streamsearch@1.1.0"
+          ]
+        },
+        {
+          "name": "streamsearch",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/streamsearch@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "kareem",
+          "version": "1.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/kareem@1.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "kerberos",
+          "version": "0.0.24",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/kerberos@0.0.24",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "nan@2.10.0"
+          ]
+        },
+        {
+          "name": "nan",
+          "version": "2.10.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/nan@2.10.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "argparse",
+          "version": "2.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/argparse@2.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "Python-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "body-parser",
+          "version": "1.9.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/body-parser@1.9.0",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": [
+            "qs@6.16.0",
+            "qs@2.2.4",
+            "raw-body@1.3.0",
+            "type-is@1.5.7",
+            "bytes@1.0.0",
+            "depd@1.0.1",
+            "depd@2.0.0",
+            "iconv-lite@0.4.4",
+            "media-typer@0.3.0",
+            "on-finished@2.1.0",
+            "on-finished@2.4.1"
+          ]
+        },
+        {
+          "name": "raw-body",
+          "version": "1.3.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/raw-body@1.3.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "bytes@1.0.0",
+            "iconv-lite@0.4.4"
+          ]
+        },
+        {
+          "name": "iconv-lite",
+          "version": "0.4.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/iconv-lite@0.4.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "type-is",
+          "version": "1.5.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/type-is@1.5.7",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "media-typer@0.3.0",
+            "mime-types@2.0.14"
+          ]
+        },
+        {
+          "name": "media-typer",
+          "version": "0.3.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/media-typer@0.3.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "mime-types",
+          "version": "2.0.14",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mime-types@2.0.14",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "mime-db@1.12.0"
+          ]
+        },
+        {
+          "name": "mime-db",
+          "version": "1.12.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mime-db@1.12.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "@sentry/node",
+          "version": "7.120.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/@sentry/node@7.120.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "@sentry/integrations@7.120.4",
+            "@sentry/types@7.120.4",
+            "@sentry/utils@7.120.4",
+            "@sentry-internal/tracing@7.120.4",
+            "@sentry/core@7.120.4"
+          ]
+        },
+        {
+          "name": "@sentry/integrations",
+          "version": "7.120.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/@sentry/integrations@7.120.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "@sentry/core@7.120.4",
+            "@sentry/types@7.120.4",
+            "@sentry/utils@7.120.4",
+            "localforage@1.10.0"
+          ]
+        },
+        {
+          "name": "@sentry/core",
+          "version": "7.120.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/@sentry/core@7.120.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "@sentry/utils@7.120.4",
+            "@sentry/types@7.120.4"
+          ]
+        },
+        {
+          "name": "@sentry/utils",
+          "version": "7.120.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/@sentry/utils@7.120.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "@sentry/types@7.120.4"
+          ]
+        },
+        {
+          "name": "@sentry/types",
+          "version": "7.120.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/@sentry/types@7.120.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "localforage",
+          "version": "1.10.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/localforage@1.10.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "lie@3.1.1"
+          ]
+        },
+        {
+          "name": "lie",
+          "version": "3.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/lie@3.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "immediate@3.0.6"
+          ]
+        },
+        {
+          "name": "immediate",
+          "version": "3.0.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/immediate@3.0.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "@sentry-internal/tracing",
+          "version": "7.120.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/@sentry-internal/tracing@7.120.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "@sentry/core@7.120.4",
+            "@sentry/types@7.120.4",
+            "@sentry/utils@7.120.4"
+          ]
+        },
+        {
+          "name": "json-stringify-safe",
+          "version": "5.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/json-stringify-safe@5.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "ejs",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/ejs@1.0.0",
+          "path": "package.json",
+          "direct": true,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "global-agent",
+          "version": "3.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/global-agent@3.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": [
+            "boolean@3.2.0",
+            "es6-error@4.1.1",
+            "matcher@3.0.0",
+            "roarr@2.15.4",
+            "semver@5.7.2",
+            "semver@7.0.0",
+            "semver@7.5.2",
+            "serialize-error@7.0.1"
+          ]
+        },
+        {
+          "name": "boolean",
+          "version": "3.2.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/boolean@3.2.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "es6-error",
+          "version": "4.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/es6-error@4.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "roarr",
+          "version": "2.15.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/roarr@2.15.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": [
+            "boolean@3.2.0",
+            "detect-node@2.1.0",
+            "globalthis@1.0.3",
+            "json-stringify-safe@5.0.1",
+            "semver-compare@1.0.0",
+            "sprintf-js@1.1.2"
+          ]
+        },
+        {
+          "name": "detect-node",
+          "version": "2.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/detect-node@2.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "semver-compare",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/semver-compare@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "sprintf-js",
+          "version": "1.1.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/sprintf-js@1.1.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "BSD-3-Clause",
+          "dependsOn": []
+        },
+        {
+          "name": "serialize-error",
+          "version": "7.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/serialize-error@7.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "type-fest@0.13.1"
+          ]
+        },
+        {
+          "name": "type-fest",
+          "version": "0.13.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/type-fest@0.13.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "CC0-1.0",
+          "dependsOn": []
+        },
+        {
+          "name": "optional-require",
+          "version": "1.1.10",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/optional-require@1.1.10",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "require-at@1.0.6"
+          ]
+        },
+        {
+          "name": "require-at",
+          "version": "1.0.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/require-at@1.0.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "mongoose",
+          "version": "4.2.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongoose@4.2.4",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": [
+            "regexp-clone@0.0.1",
+            "hooks-fixed@1.1.0",
+            "mpromise@0.5.4",
+            "ms@2.1.3",
+            "ms@2.0.0",
+            "ms@0.7.1",
+            "ms@0.7.3",
+            "async@0.9.0",
+            "mpath@0.1.1",
+            "sliced@0.0.5",
+            "bson@0.4.23",
+            "bson@1.1.6",
+            "mongodb@3.7.4",
+            "mongodb@2.0.46",
+            "mquery@1.6.3",
+            "muri@1.0.0",
+            "kareem@1.0.1"
+          ]
+        },
+        {
+          "name": "regexp-clone",
+          "version": "0.0.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/regexp-clone@0.0.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "hooks-fixed",
+          "version": "1.1.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/hooks-fixed@1.1.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "Unknown",
+          "dependsOn": []
+        },
+        {
+          "name": "mpromise",
+          "version": "0.5.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mpromise@0.5.4",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "async",
+          "version": "0.9.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/async@0.9.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "mpath",
+          "version": "0.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mpath@0.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "sliced",
+          "version": "0.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/sliced@0.0.5",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "bson",
+          "version": "0.4.23",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bson@0.4.23",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "bson",
+          "version": "1.1.6",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bson@1.1.6",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": []
+        },
+        {
+          "name": "mongodb",
+          "version": "3.7.4",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongodb@3.7.4",
+          "path": "package.json",
+          "direct": true,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "es6-promise@2.1.1",
+            "mongodb-core@1.2.19",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "denque@1.5.1",
+            "optional-require@1.1.10",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "saslprep@1.0.3",
+            "bl@2.2.1",
+            "bson@0.4.23",
+            "bson@1.1.6"
+          ]
+        },
+        {
+          "name": "es6-promise",
+          "version": "2.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/es6-promise@2.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "mongodb-core",
+          "version": "1.2.19",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongodb-core@1.2.19",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "bson@0.4.23",
+            "bson@1.1.6",
+            "kerberos@0.0.24"
+          ]
+        },
+        {
+          "name": "saslprep",
+          "version": "1.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/saslprep@1.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "sparse-bitfield@3.0.3"
+          ]
+        },
+        {
+          "name": "sparse-bitfield",
+          "version": "3.0.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/sparse-bitfield@3.0.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "memory-pager@1.5.0"
+          ]
+        },
+        {
+          "name": "memory-pager",
+          "version": "1.5.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/memory-pager@1.5.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "bl",
+          "version": "2.2.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bl@2.2.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1"
+          ]
+        },
+        {
+          "name": "mongodb",
+          "version": "2.0.46",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mongodb@2.0.46",
+          "path": "package.json",
+          "direct": false,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "es6-promise@2.1.1",
+            "mongodb-core@1.2.19",
+            "readable-stream@2.0.6",
+            "readable-stream@1.0.31",
+            "readable-stream@2.3.8",
+            "safe-buffer@5.1.2",
+            "safe-buffer@5.2.1",
+            "saslprep@1.0.3",
+            "bl@2.2.1",
+            "bson@0.4.23",
+            "bson@1.1.6",
+            "denque@1.5.1",
+            "optional-require@1.1.10"
+          ]
+        },
+        {
+          "name": "mquery",
+          "version": "1.6.3",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/mquery@1.6.3",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "bluebird@2.9.26",
+            "debug@2.6.9",
+            "debug@2.2.0",
+            "debug@3.2.7",
+            "regexp-clone@0.0.1",
+            "sliced@0.0.5"
+          ]
+        },
+        {
+          "name": "bluebird",
+          "version": "2.9.26",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/bluebird@2.9.26",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "muri",
+          "version": "1.0.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/muri@1.0.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "jsonfile",
+          "version": "2.4.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/jsonfile@2.4.0",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "graceful-fs@4.2.11"
+          ]
+        },
+        {
+          "name": "graceful-fs",
+          "version": "4.2.11",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/graceful-fs@4.2.11",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": []
+        },
+        {
+          "name": "streamifier",
+          "version": "0.1.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/streamifier@0.1.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "underscore",
+          "version": "1.13.8",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/underscore@1.13.8",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "connect-busboy",
+          "version": "0.0.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/connect-busboy@0.0.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "busboy@1.6.0"
+          ]
+        },
+        {
+          "name": "dustjs-linkedin",
+          "version": "2.5.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/dustjs-linkedin@2.5.0",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "cfenv",
+          "version": "1.2.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/cfenv@1.2.7",
+          "path": "package.json",
+          "direct": true,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "js-yaml@4.3.2",
+            "ports@1.1.0",
+            "underscore@1.13.8"
+          ]
+        },
+        {
+          "name": "js-yaml",
+          "version": "4.3.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/js-yaml@4.3.2",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "argparse@2.0.1"
+          ]
+        },
+        {
+          "name": "dustjs-helpers",
+          "version": "1.5.0",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/dustjs-helpers@1.5.0",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": [
+            "dustjs-linkedin@2.5.0"
+          ]
+        },
+        {
+          "name": "adm-zip",
+          "version": "0.4.7",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/adm-zip@0.4.7",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "express-fileupload",
+          "version": "0.0.5",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/express-fileupload@0.0.5",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": [
+            "streamifier@0.1.1",
+            "connect-busboy@0.0.2",
+            "fs-extra@0.22.1"
+          ]
+        },
+        {
+          "name": "fs-extra",
+          "version": "0.22.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/fs-extra@0.22.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "MIT",
+          "dependsOn": [
+            "graceful-fs@4.2.11",
+            "jsonfile@2.4.0",
+            "rimraf@2.7.1"
+          ]
+        },
+        {
+          "name": "rimraf",
+          "version": "2.7.1",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/rimraf@2.7.1",
+          "path": "package.json",
+          "direct": false,
+          "license": "ISC",
+          "dependsOn": [
+            "glob@7.2.3"
+          ]
+        },
+        {
+          "name": "validator",
+          "version": "13.15.35",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/validator@13.15.35",
+          "path": "package.json",
+          "direct": true,
+          "license": "MIT",
+          "dependsOn": []
+        },
+        {
+          "name": "snyk",
+          "version": "1.1307.2",
+          "ecosystem": "npm",
+          "purl": "pkg:npm/snyk@1.1307.2",
+          "path": "package.json",
+          "direct": true,
+          "dev": true,
+          "license": "Apache-2.0",
+          "dependsOn": [
+            "roarr@2.15.4",
+            "@sentry/node@7.120.4",
+            "boolean@3.2.0",
+            "global-agent@3.0.0"
+          ]
+        }
+      ]
+    }
+  }
+}

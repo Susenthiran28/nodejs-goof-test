@@ -1,0 +1,23 @@
+{
+  "name": "vannakam",
+  "version": "1.0.6",
+  "description": "Testing the npm publish/install workflow",
+  "main": "index.js",
+  "bin": {
+    "vannakam": "index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node test/smoke.test.js"
+  },
+  "keywords": [],
+  "author": "Susenthiran",
+  "license": "MIT",
+  "type": "commonjs"
+}

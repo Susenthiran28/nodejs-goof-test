@@ -1,0 +1,7 @@
+{
+    "vigilnz.scanSast": false,
+    "vigilnz.scanSecret": false,
+    "vigilnz.scanSca": true,
+    "vigilnz.scanIac": false,
+    "vigilnz.scanSbom": true
+}
