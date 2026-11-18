@@ -5,12 +5,12 @@
     "cfenv": "^1.0.4",
     "dustjs-helpers": "1.5.0",
     "dustjs-linkedin": "3.0.0",
-    "ejs": "1.0.0",
+    "ejs": "3.1.10",
     "express-fileupload": "1.1.9",
     "mongodb": "3.1.13",
     "mongoose": "9.12.2",
     "morgan": "latest",
-    "ms": "^0.7.1",
+    "ms": "2.0.0",
     "validator": "^13.5.2"
   },
   "description": "A vulnerable todo demo application",
@@ -27,10 +27,15 @@
     "bson": "1.1.4",
     "debug": "2.6.9",
     "dustjs-linkedin": "3.0.0",
+    "ejs": "3.1.10",
     "express-fileupload": "1.1.9",
     "kerberos": "1.0.0",
     "mongodb": "3.1.13",
-    "mongoose": "9.12.2"
+    "mongoose": "9.12.2",
+    "mpath": "0.8.4",
+    "mquery": "3.2.3",
+    "ms": "2.0.0",
+    "qs": "6.14.1"
   },
   "repository": {
     "type": "git",
