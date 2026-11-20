@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "adm-zip": "0.4.7",
-    "body-parser": "1.9.0",
+    "body-parser": "1.20.9",
     "cfenv": "^1.0.4",
     "dustjs-helpers": "1.5.0",
-    "dustjs-linkedin": "2.5.0",
+    "dustjs-linkedin": "3.0.0",
     "ejs": "1.0.0",
     "express-fileupload": "1.1.9",
     "mongodb": "3.1.13",
@@ -23,11 +23,16 @@
   "license": "Apache-2.0",
   "name": "goof",
   "overrides": {
+    "body-parser": "1.20.9",
     "bson": "1.1.4",
+    "debug": "2.6.9",
+    "dustjs-linkedin": "3.0.0",
     "express-fileupload": "1.1.9",
     "kerberos": "1.0.0",
     "mongodb": "3.1.13",
-    "mongoose": "4.13.21"
+    "mongoose": "4.13.21",
+    "mpath": "0.8.4",
+    "qs": "6.14.1"
   },
   "repository": {
     "type": "git",
